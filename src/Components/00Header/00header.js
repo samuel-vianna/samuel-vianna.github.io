@@ -19,7 +19,12 @@ export default function Header() {
                             $('html, body').animate({
                                 scrollTop: $('#home_container_2').offset().top
                             }, 800)
-                        }}>Sobre</h5>
+                        }}>Habilidades</h5>
+                        <h5 onClick={(e) => {
+                            $('html, body').animate({
+                                scrollTop: $('#home_container_2').offset().top
+                            }, 800)
+                        }}>Experiências</h5>
                         <h5 onClick={(e) => {
                             $('html, body').animate({
                                 scrollTop: $('#home_container_3').offset().top
