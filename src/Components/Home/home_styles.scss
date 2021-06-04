@@ -1,0 +1,86 @@
+#home_container_1 {
+    // background: var(--color3);
+    background: linear-gradient(-45deg, #9819c1, #23a6d5, var(--color5));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    #row_container_1 {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 12vh;
+        color: white;
+
+        #name_container {
+            font-size: 8vh;
+            font-weight: bold;
+            padding-bottom: 2vh;
+            animation: name_appear 1s ease-out;
+        }
+
+        #text_container{
+            animation: text_appear 1s ease-in-out;
+            font-size: 2.5vh;
+        }
+
+        #my_photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: img_appear 1s;
+
+            img {
+                width: 48vh;
+                height: 48vh;
+                border-radius: 50%;
+
+                border: 1px thin var(--color1);
+                box-shadow: 2px 2px 10px 5px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+
+
+@keyframes img_appear {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes name_appear{
+    from{
+        transform: translateX(-12vh);
+        opacity: 0.7;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes text_appear{
+    from{
+        transform: translateY(2vh);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

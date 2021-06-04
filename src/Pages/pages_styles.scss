@@ -1,0 +1,65 @@
+#home_page {
+    color: whitesmoke;
+}
+
+.page_container {
+    height: 100vh;
+    padding: 8vh 12vh;
+    font-family: Roboto;
+}
+
+#wpp_container {
+    position: sticky;
+    top: 0;
+}
+
+#sticky_icon{
+    position: sticky;
+    top: 84%;
+}
+
+#wpp_btn {
+    position: absolute;
+    top: 4vh;
+    right: 4vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 8vh;
+    height: 8vh;
+    background-color: #39d855;
+    color: white;
+
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    animation: wpp_btn_appear 200ms;
+
+    a {
+        color: white;
+        animation: shake_icon 3s ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes wpp_btn_appear {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shake_icon {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

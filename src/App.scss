@@ -1,0 +1,26 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap");
+
+html, body{
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-family: Roboto;
+}
+
+h5{
+    margin: 0;
+}
+
+:root{
+    --color1: #252627;
+    --color2: #a0939d;
+    --color3: #EEEEFF;
+    --color4: #201c37;
+    --color5: #9e1dc5;
+    --color6: #E3c5BB;
+}
+
+#root{
+    background-color: var(--color1);
+}
