@@ -18,12 +18,27 @@
             animation: name_appear 1s ease-out;
         }
 
-        #text_container{
+        #text_container {
             animation: text_appear 1s ease-in-out;
             font-size: 2.5vh;
         }
 
-        #donwload_btn{
+        #hobbies {
+            padding: 4vh 0 2vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            gap: 2vh;
+            width: fit-content;
+            animation: text_appear 1s ease-in-out;
+
+            p {
+                margin: 0;
+                font-weight: bold;
+            }
+        }
+
+        #donwload_btn {
             background-color: transparent;
             border: 1px solid var(--color1);
             margin-top: 4vh;
@@ -31,8 +46,8 @@
             font-size: 2.5vh;
         }
 
-        #donwload_btn:hover{
-            background-color: rgba(0,0,0,0.1);
+        #donwload_btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
         }
 
         #my_photo {
@@ -47,12 +62,34 @@
                 border-radius: 50%;
 
                 border: 1px thin var(--color1);
-                box-shadow: 2px 2px 10px 5px rgba(0,0,0,0.1);
+                box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
             }
         }
     }
 }
 
+#uem {
+    height: 4vh;
+    margin: 0 1vh;
+}
+
+#hobbie1{
+    animation: tilt_hobbie_icon 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+    transform: rotate(-7.5deg);
+}
+
+#hobbie2{
+    animation: tilt_hobbie_icon 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+    transform: rotate(-7.5deg);
+}
+
+#hobbie3{
+    animation: tilt_hobbie_icon 3s ease-in-out infinite;
+    animation-delay: 2.5s;
+    transform: rotate(-7.5deg);
+}
 
 @keyframes img_appear {
     from {
@@ -63,23 +100,23 @@
     }
 }
 
-@keyframes name_appear{
-    from{
+@keyframes name_appear {
+    from {
         transform: translateX(-12vh);
         opacity: 0.7;
     }
-    to{
+    to {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-@keyframes text_appear{
-    from{
+@keyframes text_appear {
+    from {
         transform: translateY(2vh);
         opacity: 0.5;
     }
-    to{
+    to {
         transform: translateY(0);
         opacity: 1;
     }
@@ -94,5 +131,17 @@
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes tilt_hobbie_icon{
+    from{
+        transform: rotate(-7.5deg);
+    }
+    50%{
+        transform: rotate(7.5deg);
+    }
+    to {
+        transform: rotate(-7.5deg);
     }
 }

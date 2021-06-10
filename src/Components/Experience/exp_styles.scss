@@ -13,13 +13,35 @@
         justify-content: center;
         display: flex;
         flex-direction: column;
+        text-align: center;
         padding: 0 12vh;
     }
 
     .title_row {
         font-weight: bold;
         font-size: 6vh;
-        margin-top: 8vh;
+        margin-top: 4vh;
+    }
+
+    #studies {
+        font-weight: bold;
+        font-size: 6vh;
+        margin-top: 16vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4vh;
+    
+        h5{
+            font-size: 4vh;
+        }
+    }
+
+    #studies_container{
+        display: flex;
+        justify-content: center;
+        gap: 16vh;
+        margin: 8vh 0;
     }
 
     #wrap {
@@ -88,6 +110,58 @@
             display: flex;
             gap: 1vh;
 
+            .date-number {
+                font-size: 2vh;
+            }
+        }
+    }
+
+    .card_row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 4px 0;
+    }
+
+    .row_title {
+        font-weight: bold;
+        font-size: 2.1vh;
+    }
+
+    .local_row{
+        display: flex;
+        gap: 1vh;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card_study {
+    color: black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 4vh 2vh;
+    transition: 200ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 48vh;
+    width: 48vh;
+
+    #card_title {
+        padding: 1vh 0 2vh;
+        font-size: 4vh;
+        font-weight: bold;
+    }
+
+    .date-row {
+        display: flex;
+        gap: 4vh;
+
+        .date-info {
+            display: flex;
+            gap: 1vh;
+
             .date-desc {
                 font-weight: bold;
                 font-size: 2.1vh;
@@ -106,7 +180,30 @@
     }
 }
 
-.card_exp:hover{
+.card_exp:hover,
+.card_study:hover{
     transform: scale(1.1);
     background-color: var(--color6);
+}
+
+#icon1{
+    animation: tilt_icon 3s infinite ease-in-out;
+}
+
+#icon2{
+    animation: tilt_icon 3s infinite ease-in-out;
+    transform: rotate(-15deg);
+    animation-delay: 1s;
+}
+
+@keyframes tilt_icon{
+    from{
+        transform: rotate(-15deg);
+    }
+    50%{
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
 }

@@ -33,9 +33,15 @@ export default function Header() {
                     </Col>
                     <Col md={{ span: 4, offset: 4 }}>
                         <div id='social_media'>
-                            <h5><IoLogoInstagram size='4vh' /></h5>
-                            <h5><IoLogoGithub size='4vh' /></h5>
-                            <h5><IoLogoLinkedin size='4vh' /></h5>
+                            <a href='https://www.instagram.com/samuel.vianna/' target='_blank'>
+                                <h5><IoLogoInstagram size='4vh' /></h5>
+                            </a>
+                            <a href='https://github.com/samuel-vianna' target='_blank'>
+                                <h5><IoLogoGithub size='4vh' /></h5>
+                            </a>
+                            <a href='https://www.linkedin.com/in/samuel-vianna-a5b0b31b2/' target='_blank'>
+                                <h5><IoLogoLinkedin size='4vh' /></h5>
+                            </a>
                         </div>
                     </Col>
                 </Row>

@@ -5,6 +5,8 @@ import './exp_styles.scss';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import expList from './experiences.json';
+import studiesList from './studies.json';
+import { FaGraduationCap } from 'react-icons/fa';
 
 export default function Experience() {
 
@@ -35,10 +37,20 @@ export default function Experience() {
                                 )
                             })
                             }
-
                         </div>
+                    </div>
 
-
+                    <div id='studies'>
+                        <FaGraduationCap size='6vh' id='icon1' />
+                        <h5>Formação</h5>
+                        <FaGraduationCap size='6vh' id='icon2' />
+                    </div>
+                    <div id='studies_container'>
+                        {studiesList.map(card => {
+                            return (
+                                <StudyCard info={card} />
+                            )
+                        })}
                     </div>
                 </Col>
 
@@ -55,6 +67,39 @@ export function ExperienceCard(props) {
     return (
         <div className='card_exp'>
             <h5 id='card_title'>{info.title}</h5>
+
+            <div className='local_row'>
+                <p className='row_title'>Local:</p>
+                <p>{info.local}</p>
+            </div>
+
+            <div className='date-row'>
+                <div className='date-info'>
+                    <p className='row_title'>Start:</p>
+                    <p className='date-number'>{info.start}</p>
+                </div>
+
+                <div className='date-info'>
+                    <p className='row_title'>End:</p>
+                    <p className='date-number'>{info.end}</p>
+                </div>
+            </div>
+
+            
+            <p>{info.description}</p>
+
+        </div>
+    )
+}
+
+
+export function StudyCard(props) {
+    var info = props.info
+
+    return (
+        <div className='card_study'>
+            <h5 id='card_title'>{info.title}</h5>
+
             <div className='date-row'>
                 <div className='date-info'>
                     <p className='date-desc'>Start:</p>
@@ -67,8 +112,7 @@ export function ExperienceCard(props) {
                 </div>
             </div>
 
-            <p>{info.description}</p>
-
+            <h5>{info.local}</h5>
         </div>
     )
 }
