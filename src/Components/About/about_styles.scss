@@ -35,9 +35,10 @@
             display: flex;
             justify-content: start;
             text-align: center;
+            padding: 3vh 0;
 
             #card_title {
-                padding: 2vh 0;
+                padding: 8px 0;
                 font-size: 4vh;
                 font-weight: bold;
             }
@@ -45,7 +46,7 @@
             .card_row {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                margin: 1vh 0;
+                margin: 4px 0;
             }
         }
     }

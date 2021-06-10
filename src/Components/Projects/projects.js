@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
 import './projects_styles.scss';
-import { SiWhatsapp } from 'react-icons/si'
 
 export default function Projects() {
     return (

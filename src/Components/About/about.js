@@ -2,35 +2,77 @@ import React, { Fragment, useEffect } from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
 import $ from 'jquery';
 import './about_styles.scss';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function About() {
+
+    useEffect(() => {
+        Aos.init({ duration: 500 });
+    }, []);
+
+    const json_tools = [
+        {
+            title: 'R',
+            level: 4,
+        },
+        {
+            title: 'Python',
+            level: 1,
+        },
+        {
+            title: 'SQL',
+            level: 1,
+        },
+        {
+            title: 'React Js',
+            level: 3,
+        }
+    ]
+
+    const json_skills = [
+        {
+            title: 'Statistics',
+            level: 4,
+        },
+        {
+            title: 'Data Visualization',
+            level: 4,
+        },
+        {
+            title: 'Machine Learning',
+            level: 2,
+        },
+        {
+            title: 'Web development',
+            level: 3,
+        }
+    ]
+
+    const json_lenguages = [
+        {
+            title: 'Português',
+            level: 5,
+        },
+        {
+            title: 'inglês',
+            level: 3,
+        },
+        {
+            title: 'Espanhol',
+            level: 2,
+        }
+    ]
+
     return (
         <Fragment id='home_page'>
             <Container fluid className='page_container' id='home_container_2'>
                 <Col id='row_container_2'>
                     <Row md='12' className='title_row'>Tools / Skills</Row>
                     <Row id='cards_row'>
-                        <Col className='card'>
-                            <h5 id='card_title'>Tools</h5>
-                            <CardLevel title='R' level={4} />
-                            <CardLevel title='Python' level={1} />
-                            <CardLevel title='SQL' level={1} />
-                            <CardLevel title='React JS' level={3} />
-                            {/* <CardLevel title='Flutter' level={1} /> */}
-                        </Col>
-                        <Col className='card'>
-                            <h5 id='card_title'>Skills</h5>
-                            <CardLevel title='Statistics' level={4} />
-                            <CardLevel title='Data Visualization' level={4} />
-                            <CardLevel title='Machine Learning' level={2} />
-                            <CardLevel title='Web development' level={3} />
-                        </Col>
-                        <Col className='card'>
-                            <h5 id='card_title'>Idiomas</h5>
-                            <CardLevel title='Português' level={5} />
-                            <CardLevel title='inglês' level={3} />
-                            <CardLevel title='Espanhol' level={2} />
-                        </Col>
+                        <ToolCard json={json_tools} title='Tools'/>
+                        <ToolCard json={json_skills} title='Skills' />
+                        <ToolCard json={json_lenguages} title='Idiomas' />
                     </Row>
                 </Col>
 
@@ -40,25 +82,29 @@ export default function About() {
     )
 }
 
-export function CardLevel(props){
-    return(
-        <div className='card_row'>
-        <h5>{props.title}</h5>
-        <Level skill={props.title} level={props.level} />
-    </div>
+
+export function ToolCard(props) {
+    var tools = props.json
+    return (
+        <Col className='card' data-aos='fade-up'>
+            <h5 id='card_title'>{props.title}</h5>
+            {tools.map(x => {
+                return (
+                    <CardLevel title={x.title} level={x.level} />
+                )
+            })}
+        </Col>
     )
 }
 
 export function Level(props) {
-
     var skill = props.skill.split(' ').join('_')
-    console.log(skill)
 
     useEffect(() => {
-        for(var i = 1; i <= props.level; i++){
+        for (var i = 1; i <= props.level; i++) {
             $(`#${skill}_${i}`).addClass('active')
         }
-    },[])
+    }, [])
 
     return (
         <div className='levels'>
@@ -67,6 +113,15 @@ export function Level(props) {
             <div className='square' id={skill + '_3'}></div>
             <div className='square' id={skill + '_4'}></div>
             <div className='square' id={skill + '_5'}></div>
+        </div>
+    )
+}
+
+export function CardLevel(props) {
+    return (
+        <div className='card_row'>
+            <p>{props.title}</p>
+            <Level skill={props.title} level={props.level} />
         </div>
     )
 }

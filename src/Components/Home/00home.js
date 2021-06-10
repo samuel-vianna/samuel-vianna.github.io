@@ -15,6 +15,7 @@ export default function Home() {
                             dui non lectus mollis lobortis. Donec ac nisi mi. Nullam lacinia viverra
                             quam nec efficitur. Nulla semper erat et tortor pretium, ut euismod lectus sagittis.
                         </Row>
+                        <Row><button id='donwload_btn'>Download My CV</button></Row>
                     </Col>
                     <Col md='4' id='my_photo'>
                     <img src={photo} alt='me'/>

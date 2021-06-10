@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap");
+
+#home_container_3 {
+    background: var(--color3);
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    #row_container_3 {
+        height: 100%;
+        // align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12vh;
+    }
+
+    .title_row {
+        font-weight: bold;
+        font-size: 6vh;
+        margin-top: 8vh;
+    }
+
+    #wrap {
+        background-color: black;
+        width: 8px;
+        height: 1000px;
+    }
+
+    #exp_container {
+        display: grid;
+        grid-template-columns: 1fr 23fr;
+        gap: 1vh;
+        margin-top: 4vh;
+
+        .exp_year {
+            margin-top: 4vh;
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+            gap: 4vh;
+
+            .year_info {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 2vh;
+                height: 100px;
+            }
+        }
+    }
+}
+
+.card_exp {
+    background-color: var(--color3);
+    color: black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    max-height: 100px;
+    justify-content: start;
+    text-align: center;
+    padding: 3vh 0;
+
+    #card_title {
+        padding: 8px 0;
+        font-size: 4vh;
+        font-weight: bold;
+    }
+
+    .card_row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 4px 0;
+    }
+}

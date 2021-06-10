@@ -22,7 +22,7 @@ export default function Header() {
                         }}>Habilidades</h5>
                         <h5 onClick={(e) => {
                             $('html, body').animate({
-                                scrollTop: $('#home_container_2').offset().top
+                                scrollTop: $('#home_container_3').offset().top
                             }, 800)
                         }}>Experiências</h5>
                         <h5 onClick={(e) => {
