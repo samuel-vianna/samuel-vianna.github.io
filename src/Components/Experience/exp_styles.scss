@@ -10,6 +10,7 @@
     #row_container_3 {
         height: 100%;
         // align-items: center;
+        justify-content: center;
         display: flex;
         flex-direction: column;
         padding: 0 12vh;
@@ -24,7 +25,7 @@
     #wrap {
         background-color: black;
         width: 8px;
-        height: 1000px;
+        // height: 1000px;
     }
 
     #exp_container {
@@ -33,17 +34,28 @@
         gap: 1vh;
         margin-top: 4vh;
 
+        .exp_year:first-child{
+            margin: 4vh 0 2vh;
+        }
+
         .exp_year {
-            margin-top: 4vh;
-            display: grid;
-            grid-template-columns: 1fr 11fr;
-            gap: 4vh;
+            margin: 8vh 0 2vh;
+            display: flex;
+            align-items: center;
+            // grid-template-columns: 1fr 11fr;
+            gap: 8vh;
+
+            h5 {
+                font-weight: bold;
+                font-size: 22px;
+            }
 
             .year_info {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 2vh;
-                height: 100px;
+                grid-template-columns: 1fr 1fr ;
+                width: 90%;
+                gap: 4vh;
+                // height: 100px;
             }
         }
     }
@@ -54,15 +66,37 @@
     color: black;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    max-height: 100px;
+    border-radius: 8px;
     justify-content: start;
+    flex-direction: column;
     text-align: center;
-    padding: 3vh 0;
+    padding: 3vh 1vh;
+    transition: 200ms ease-in-out;
+    
 
     #card_title {
-        padding: 8px 0;
+        padding: 1vh 0 2vh;
         font-size: 4vh;
         font-weight: bold;
+    }
+
+    .date-row {
+        display: flex;
+        justify-content: space-around;
+
+        .date-info {
+            display: flex;
+            gap: 1vh;
+
+            .date-desc {
+                font-weight: bold;
+                font-size: 2.1vh;
+            }
+
+            .date-number {
+                font-size: 2vh;
+            }
+        }
     }
 
     .card_row {
@@ -70,4 +104,9 @@
         grid-template-columns: 1fr 1fr;
         margin: 4px 0;
     }
+}
+
+.card_exp:hover{
+    transform: scale(1.1);
+    background-color: var(--color6);
 }
