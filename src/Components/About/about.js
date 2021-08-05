@@ -18,16 +18,16 @@ export default function About() {
         },
         {
             title: 'Python',
-            level: 1,
+            level: 3,
         },
         {
             title: 'SQL',
             level: 1,
         },
         {
-            title: 'React Js',
+            title: 'React JS',
             level: 3,
-        }
+        },
     ]
 
     const json_skills = [

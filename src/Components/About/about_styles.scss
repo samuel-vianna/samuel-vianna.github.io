@@ -18,7 +18,7 @@
     .title_row {
         font-weight: bold;
         font-size: 6vh;
-        margin-top: 8vh;
+        margin-top: 2vw;
     }
 
     #cards_row {
@@ -46,7 +46,11 @@
             .card_row {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                margin: 4px 0;
+                margin: 8px 0;
+
+                p{
+                    margin: 0;
+                }
             }
         }
     }
@@ -55,12 +59,12 @@
 .levels {
     display: flex;
     align-items: center;
-    gap: 1vh;
+    gap: 0.5vw;
 
     .square {
         background-color: white;
-        width: 3vh;
-        height: 3vh;
+        width: 1.5vw;
+        height: 1.5vw;
         border-radius: 4px;
         border: 2px thin rgba(0, 0, 0, 0.7);
     }

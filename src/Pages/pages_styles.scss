@@ -14,7 +14,7 @@
     font-family: Roboto;
 }
 
-#sticky_icon{
+#sticky_icon {
     position: sticky;
     top: 84%;
 }
@@ -63,4 +63,67 @@
     100% {
         transform: rotate(0deg);
     }
+}
+
+@media (max-width: 1200px) {
+    .page_container {
+        min-height: 100vh !important;
+        height: auto !important;
+    }
+
+    #cards_row {
+        grid-template-columns: 1fr !important;
+        width: 50% !important;
+    }
+
+    .card_study {
+        width: 28vw !important;
+        height: 28vw !important;
+    }
+
+    .square {
+        width: 2vw !important;
+        height: 2vw !important;
+    }
+}
+
+@media (max-width: 900px) {
+    #row_container_1 {
+        flex-direction: column-reverse;
+
+        #name_container {
+            padding-top: 4vh;
+        }
+
+        #my_photo {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    #cards_row {
+        width: 70% !important;
+    }
+
+    .square {
+        width: 2.5vw !important;
+        height: 2.5vw !important;
+    }
+
+    .year_info {
+        grid-template-columns: 1fr !important;
+    }
+
+    #studies_container{
+        display: grid !important;
+        grid-template-columns: 1fr;
+        margin: 4vw auto !important;
+        gap: 4vw !important;
+    }
+
+    .card_study {
+        width: 32vw !important;
+        height: 32vw !important;
+    }
+
 }
