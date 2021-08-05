@@ -74,7 +74,7 @@
 
             .year_info {
                 display: grid;
-                grid-template-columns: 1fr 1fr ;
+                grid-template-columns: 1fr 1fr 1fr ;
                 width: 90%;
                 gap: 4vh;
                 // height: 100px;
@@ -145,8 +145,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 48vh;
-    width: 48vh;
+    height: 24vw;
+    width: 24vw;
 
     #card_title {
         padding: 1vh 0 2vh;

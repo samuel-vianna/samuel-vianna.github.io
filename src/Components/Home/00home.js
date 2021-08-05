@@ -5,6 +5,7 @@ import photo from './images/eu.jpg';
 import { CgPiano } from 'react-icons/cg'
 import { FaGamepad } from 'react-icons/fa'
 import { BsMusicNoteBeamed } from 'react-icons/bs'
+import CV from './samuel_vianna.pdf';
 
 export default function Home() {
     return (
@@ -21,7 +22,9 @@ export default function Home() {
                         <Row id='hobbies'>
                             <p>Hobbies:</p> <CgPiano size='3vh' id='hobbie1' /> <FaGamepad size='3vh' id='hobbie2' /> <BsMusicNoteBeamed size='3vh' id='hobbie3'/>
                         </Row>
-                        <Row><button id='donwload_btn'>Download CV</button></Row>
+                        <Row><button id='donwload_btn'>
+                            <a href={CV} download='samuel_vianna.pdf'>Download CV</a>
+                            </button></Row>
                     </Col>
                     <Col md='4' id='my_photo'>
                         <img src={photo} alt='me' />
