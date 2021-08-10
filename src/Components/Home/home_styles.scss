@@ -14,7 +14,7 @@
         color: white;
 
         #name_container {
-            font-size: 4vw;
+            font-size: 3rem;
             font-weight: bold;
             padding-bottom: 2vh;
             animation: name_appear 1s ease-out;
@@ -22,7 +22,10 @@
 
         #text_container {
             animation: text_appear 1s ease-in-out;
-            font-size: 2.5vh;
+            
+            h5{
+                font-size: 1.5rem;
+            }
         }
 
         #hobbies {
@@ -37,6 +40,7 @@
             p {
                 margin: 0;
                 font-weight: bold;
+                font-size: 1.5rem;
             }
         }
 

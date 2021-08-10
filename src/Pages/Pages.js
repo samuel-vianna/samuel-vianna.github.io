@@ -4,7 +4,7 @@ import { SiWhatsapp } from 'react-icons/si';
 
 import Home from '../Components/Home/00home';
 import About from '../Components/About/about';
-import Projects from '../Components/Projects/projects';
+// import Projects from '../Components/Projects/projects';
 import Experience from '../Components/Experience/Experience';
 
 export default function Pages() {

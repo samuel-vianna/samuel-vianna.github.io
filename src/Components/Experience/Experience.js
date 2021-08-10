@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
-import $ from 'jquery';
 import './exp_styles.scss';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -25,7 +24,7 @@ export default function Experience() {
                             {expList.map(exp => {
                                 return (
                                     <div className='exp_year'>
-                                        <h5>{exp.year}</h5>
+                                        <h5 className='year_text'>{exp.year}</h5>
                                         <div className='year_info'>
                                             {exp.list.map(card => {
                                                 return (

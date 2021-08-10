@@ -10,19 +10,20 @@
 
 .page_container_no_limit {
     min-height: 100vh;
-    padding: 8vh 12vh;
+    padding: 8vh 4rem;
     font-family: Roboto;
 }
 
 #sticky_icon {
     position: sticky;
+    z-index: 998;
     top: 84%;
 }
 
 #wpp_btn {
     position: absolute;
     top: 4vh;
-    right: 4vh;
+    right: 2vw;
 
     display: flex;
     justify-content: center;
@@ -69,27 +70,36 @@
     .page_container {
         min-height: 100vh !important;
         height: auto !important;
+        padding: 8vh 4vw !important;
     }
 
     #cards_row {
         grid-template-columns: 1fr !important;
-        width: 50% !important;
     }
 
     .card_study {
-        width: 28vw !important;
-        height: 28vw !important;
+        height: 16rem !important;
+        width: 16rem !important;
+    }
+
+    .year_info {
+        grid-template-columns: 2fr !important;
     }
 
     .square {
-        width: 2vw !important;
-        height: 2vw !important;
+        width: 1.5rem !important;
+        height: 1.5rem !important;
     }
 }
 
 @media (max-width: 900px) {
+    .title_row {
+        font-size: 2rem !important;
+    }
+
     #row_container_1 {
         flex-direction: column-reverse;
+        padding: 1rem !important;
 
         #name_container {
             padding-top: 4vh;
@@ -101,29 +111,30 @@
         }
     }
 
-    #cards_row {
-        width: 70% !important;
+    #row_container_3 {
+        padding: 0 !important;
     }
 
-    .square {
-        width: 2.5vw !important;
-        height: 2.5vw !important;
+    .exp_year {
+        justify-content: center !important;
+    }
+
+    .year_text {
+        display: none !important;
+    }
+
+    #cards_row {
+        width: 90% !important;
     }
 
     .year_info {
         grid-template-columns: 1fr !important;
     }
 
-    #studies_container{
+    #studies_container {
         display: grid !important;
         grid-template-columns: 1fr;
         margin: 4vw auto !important;
         gap: 4vw !important;
     }
-
-    .card_study {
-        width: 32vw !important;
-        height: 32vw !important;
-    }
-
 }

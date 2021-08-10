@@ -104,7 +104,7 @@ export function Level(props) {
         for (var i = 1; i <= props.level; i++) {
             $(`#${skill}_${i}`).addClass('active')
         }
-    }, [])
+    }, [props.level, skill])
 
     return (
         <div className='levels'>

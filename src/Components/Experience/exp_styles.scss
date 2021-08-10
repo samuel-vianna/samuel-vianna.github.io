@@ -19,7 +19,7 @@
 
     .title_row {
         font-weight: bold;
-        font-size: 6vh;
+        font-size: 4rem;
         margin-top: 4vh;
     }
 
@@ -65,7 +65,7 @@
             display: flex;
             align-items: center;
             // grid-template-columns: 1fr 11fr;
-            gap: 8vh;
+            gap: 2rem;
 
             h5 {
                 font-weight: bold;
@@ -89,13 +89,14 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     border-radius: 8px;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
     padding: 3vh 1vh;
     transition: 200ms ease-in-out;
+    position: relative;
+    // z-index: 1 !important;
     
-
     #card_title {
         padding: 1vh 0 2vh;
         font-size: 4vh;
@@ -145,8 +146,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 24vw;
-    width: 24vw;
+    height: 24rem;
+    width: 24rem;
 
     #card_title {
         padding: 1vh 0 2vh;
