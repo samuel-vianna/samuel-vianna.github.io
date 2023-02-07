@@ -15,7 +15,7 @@ export default function Experience() {
     if (typeof window !== "undefined") {
       let temp = scrollContainer
         ? scrollContainer
-        : document.querySelector("#experience-container");
+        : document.querySelector(".experience-container");
 
       if (!scrollContainer) {
         setScrollContainer(temp);
@@ -40,17 +40,18 @@ export default function Experience() {
           alignItems="center"
           mb={24}
           w="100%"
-          id="experience-container"
           overflowX="scroll"
           transform="rotateX(180deg)"
+          className="experience-container"
+          id={styles.experienceContainer}
         >
-          <Flex transform="rotateX(180deg)" gap={8}>
+          <Flex transform="rotateX(180deg)" gap={8} id={styles.yearContainer}>
             {experience[language].history.map((item, index) => (
               <Stack key={index}>
                 <Text as="b" fontSize="lg" py={4}>
                   {item.year}
                 </Text>
-                <Flex gap={8}>
+                <Flex gap={8} id={styles.experienceCardsContainer}>
                   {item.items.map((card, index2) => (
                     <ExperienceCardComponent key={index2} {...card} />
                   ))}

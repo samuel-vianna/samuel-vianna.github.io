@@ -22,3 +22,22 @@
         background: #e3c5bb;
     }
 }
+
+@media (max-width: 768px) {
+    #experienceContainer {
+        flex-direction: column;
+        margin: 0 auto;
+        // overflow-x: hidden;
+        margin-bottom: 32px;
+    }
+
+    #yearContainer {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    #experienceCardsContainer {
+        flex-direction: column !important;
+        transform: rotateX(0);
+    }
+}

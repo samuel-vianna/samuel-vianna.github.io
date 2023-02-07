@@ -24,8 +24,14 @@ export default function Home() {
       <main className={styles.main}>
         <NavbarComponent />
         <PageContainerComponent>
-          <Flex alignItems="center" justifyContent="center" mb={24} gap={8}>
-            <Box maxW="700">
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            mb={24}
+            gap={8}
+            id={styles.homeContainer}
+          >
+            <Box maxW="600">
               <Heading>{homeText[language].greetings}</Heading>
               <Text my={8}>{homeText[language].intro}</Text>
 
@@ -42,7 +48,7 @@ export default function Home() {
                 </a>
               </Button>
             </Box>
-            <Flex>
+            <Flex >
               <Image
                 src="/eu.jpeg"
                 alt="profile photo"

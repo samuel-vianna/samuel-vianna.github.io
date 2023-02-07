@@ -1,5 +1,6 @@
 import { Flex, Heading, Stack } from "@chakra-ui/react";
 import { useContext } from "react";
+import styles from "@/styles/Skills.module.scss";
 import { NavbarComponent } from "@/components/elements/navbar";
 import { PageContainerComponent } from "@/components/elements/pageContainer";
 import { SkillCardComponent } from "@/components/cards/skillCard";
@@ -49,7 +50,12 @@ export default function Experience() {
       <NavbarComponent />
       <PageContainerComponent>
         <Heading mb={4}>{skillsTitles[language].pageTitle}</Heading>
-        <Flex alignItems="center" justifyContent="center" gap={8}>
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          gap={8}
+          id={styles.skillsContainer}
+        >
           <SkillCardComponent
             title={skillsTitles[language].list[0]}
             items={technologiesItems}

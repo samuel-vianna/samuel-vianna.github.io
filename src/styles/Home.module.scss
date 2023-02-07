@@ -34,3 +34,12 @@
     transform: rotate(-7.5deg);
   }
 }
+
+@media (max-width: 1024px) {
+  #homeContainer {
+    flex-direction: column-reverse;
+    margin: 32px auto;
+    margin-bottom: 32px;
+    justify-content: flex-start;
+  }
+}
