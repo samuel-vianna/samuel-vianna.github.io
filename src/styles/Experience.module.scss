@@ -1,0 +1,24 @@
+.experience {
+    /* width */
+    ::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #404244;
+        border-radius: 8px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #eeeeff;
+        border-radius: 8px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #e3c5bb;
+    }
+}
