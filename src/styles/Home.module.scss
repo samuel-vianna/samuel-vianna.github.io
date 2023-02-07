@@ -38,8 +38,12 @@
 @media (max-width: 1024px) {
   #homeContainer {
     flex-direction: column-reverse;
-    margin: 32px auto;
-    margin-bottom: 32px;
+    margin: 0 auto;
     justify-content: flex-start;
+  }
+
+  #image {
+    width: 200px !important;
+    height: 200px !important;
   }
 }

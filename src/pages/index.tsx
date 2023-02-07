@@ -48,8 +48,9 @@ export default function Home() {
                 </a>
               </Button>
             </Box>
-            <Flex >
+            <Flex>
               <Image
+                id={styles.image}
                 src="/eu.jpeg"
                 alt="profile photo"
                 borderRadius="50%"

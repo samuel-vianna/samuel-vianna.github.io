@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import NextLink from "next/link";
+import styles from "@/styles/Components/Elements.module.scss";
 import { Box, Flex, Link, Stack, Switch, Text } from "@chakra-ui/react";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { navBarText } from "../../assets/text";
@@ -40,7 +41,7 @@ export function NavbarComponent() {
 
   return (
     <Stack
-      direction={"row"}
+      direction="row"
       justifyContent="space-between"
       spacing={4}
       bg={"dark.900"}
@@ -60,7 +61,7 @@ export function NavbarComponent() {
           <Text>en</Text>
         </Flex>
         {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+          <Box key={navItem.label} className={styles.navbarComponent}>
             <Link
               as={NextLink}
               href={navItem.href ?? "#"}
