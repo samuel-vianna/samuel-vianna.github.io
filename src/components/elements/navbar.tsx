@@ -19,9 +19,18 @@ interface iconItemsProps {
 type languageOptionsProps = "pt" | "en";
 
 const ICON_ITEMS: iconItemsProps[] = [
-  { icon: <FaInstagram fontSize="2rem" />, href: "" },
-  { icon: <FaGithub fontSize="2rem" />, href: "" },
-  { icon: <FaLinkedin fontSize="2rem" />, href: "" },
+  {
+    icon: <FaInstagram fontSize="2rem" />,
+    href: "https://www.instagram.com/samuel.vianna/",
+  },
+  {
+    icon: <FaGithub fontSize="2rem" />,
+    href: "https://github.com/samuel-vianna",
+  },
+  {
+    icon: <FaLinkedin fontSize="2rem" />,
+    href: "https://www.linkedin.com/in/samuel-vianna-quintanilha-a5b0b31b2/",
+  },
 ];
 
 export function NavbarComponent() {
@@ -68,7 +77,7 @@ export function NavbarComponent() {
               fontWeight={500}
               _hover={{
                 textDecoration: "none",
-                color: "secondary.900",
+                color: "secondary.500",
               }}
             >
               {formatToTitleCase(navItem.label)}
@@ -80,11 +89,13 @@ export function NavbarComponent() {
         {ICON_ITEMS.map((navItem, index) => (
           <Box key={index}>
             <Link
-              href={navItem.href ?? "#"}
-              fontWeight={500}
+            as={NextLink}
+              target="_blank"
+              rel="noreferrer noopener"
+              href={navItem.href}
               _hover={{
                 textDecoration: "none",
-                color: "secondary.900",
+                color: "secondary.500",
               }}
             >
               {navItem.icon}

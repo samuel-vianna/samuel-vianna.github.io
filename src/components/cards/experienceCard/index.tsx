@@ -29,7 +29,7 @@ export function ExperienceCardComponent({
       <Text fontSize="lg" fontWeight="bold" align="center">
         {title}
       </Text>
-      <Divider mb={2} />
+      <Divider my={2} />
 
       <Stack spacing={1}>
         <Flex align="center" gap={2}>

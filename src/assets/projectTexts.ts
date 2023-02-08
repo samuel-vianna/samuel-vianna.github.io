@@ -9,9 +9,10 @@ export const projectsTags = [
 
 export const projects = [
   {
-    title: "Simulando o problema de Monty Hall",
-    description: "teste",
+    title: "O problema de Monty Hall",
+    description:
+      "Simulação do famoso problema de Monty Hall sobre a escolha de portas em um programa de TV.",
     tags: ["Estatística", "R"],
-    link: "/monty_hall",
+    link: "https://samuel-vianna.github.io/Monty-Hall/monty_hall.html",
   },
 ];

@@ -24,21 +24,29 @@ export function ProjectCardComponent({
       borderRadius="lg"
       margin="0 0 auto"
     >
-      <Text fontSize="lg" fontWeight="bold" align="center" position="relative">
-        {title}
-        <Link href={link}>
-          <Box position="absolute" top="0" right="0">
+      <Flex align="center" justifyContent="space-between" gap={2}>
+        <Text
+          fontSize="lg"
+          fontWeight="bold"
+          align="center"
+          position="relative"
+        >
+          {title}
+        </Text>
+        <Link href={link} target="_blank">
+          <Box>
             <BiLinkExternal />
           </Box>
         </Link>
-      </Text>
+      </Flex>
 
-      <Divider mb={2} />
+      <Divider my={2} />
 
       <Stack spacing={1}>
         <Flex align="center" gap={2}>
           {tags.map((tag) => (
             <Text
+              key={tag}
               fontSize="sm"
               border="1px solid white"
               borderRadius="lg"
