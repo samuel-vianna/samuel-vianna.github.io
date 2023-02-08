@@ -1,4 +1,5 @@
-.navbarComponent {
+@media (max-width: 768px) {
+  .navbarComponent {
     display: none !important;
   }
-  
+}

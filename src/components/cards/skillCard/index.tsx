@@ -15,7 +15,7 @@ interface props {
 
 export function SkillCardComponent({ title, items }: props) {
   return (
-    <Box border="1px solid white" py={4} px={6} borderRadius="md" minW={200}>
+    <Box border="1px solid white" py={4} px={6} borderRadius="lg" minW={200}>
       <Text fontSize="lg" fontWeight="bold" align="center">
         {title}
       </Text>

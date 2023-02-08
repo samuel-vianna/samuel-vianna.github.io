@@ -22,7 +22,7 @@ export function ExperienceCardComponent({
       border="1px solid white"
       py={4}
       px={6}
-      borderRadius="md"
+      borderRadius="lg"
       w={400}
       margin="0 0 auto"
     >
@@ -49,7 +49,7 @@ export function ExperienceCardComponent({
         <>
           <Divider my={2} />
 
-          <Text maxH={100} overflowY="scroll">
+          <Text maxH={100} overflowY="scroll" pr={2}>
             {description}
           </Text>
         </>
