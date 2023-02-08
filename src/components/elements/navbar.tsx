@@ -151,7 +151,7 @@ export function NavbarComponent() {
             </Box>
           ))}
         </Stack>
-          <Divider />
+        <Divider />
       </Collapse>
     </>
   );
