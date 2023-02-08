@@ -41,7 +41,14 @@ export default function Experience() {
       <PageContainerComponent className={styles.projects}>
         {/* <Heading mb={2}>{experience[language].pageTitle}</Heading> */}
         <Heading mb={2}>Projetos</Heading>
-        <Flex pb={8} gap={2} justify="flex-start" align="center" w="100%">
+        <Flex
+          pb={8}
+          gap={2}
+          justify="flex-start"
+          align="center"
+          w="100%"
+          flexWrap="wrap"
+        >
           <Text as="b">Tags:</Text>
           {projectsTags.map((item, index) => (
             <TagButtonComponent

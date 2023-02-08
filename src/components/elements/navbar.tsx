@@ -1,10 +1,22 @@
 import { useContext } from "react";
 import NextLink from "next/link";
 import styles from "@/styles/Components/Elements.module.scss";
-import { Box, Flex, Link, Stack, Switch, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Collapse,
+  Divider,
+  Flex,
+  IconButton,
+  Link,
+  Stack,
+  Switch,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { navBarText } from "../../assets/text";
 import { MyContext } from "@/context";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 interface navItemsProps {
   label: string;
@@ -15,8 +27,6 @@ interface iconItemsProps {
   icon: JSX.Element;
   href: string;
 }
-
-type languageOptionsProps = "pt" | "en";
 
 const ICON_ITEMS: iconItemsProps[] = [
   {
@@ -34,6 +44,7 @@ const ICON_ITEMS: iconItemsProps[] = [
 ];
 
 export function NavbarComponent() {
+  const { isOpen, onToggle } = useDisclosure();
   const { language, setLanguage } = useContext(MyContext);
 
   const NAV_ITEMS: navItemsProps[] = [
@@ -49,60 +60,99 @@ export function NavbarComponent() {
     string.substring(1).toLowerCase();
 
   return (
-    <Stack
-      direction="row"
-      justifyContent="space-between"
-      spacing={4}
-      bg={"dark.900"}
-      color="white"
-      w="100%"
-      py={4}
-      px={16}
-    >
-      <Flex gap={8} alignItems="center">
-        <Flex pr={4} gap={2} alignItems="center">
-          <Text>pt</Text>
-          <Switch
-            colorScheme="secondary"
-            defaultChecked={language === "en"}
-            onChange={(e) => setLanguage(e.target.checked ? "en" : "pt")}
-          />
-          <Text>en</Text>
+    <>
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        spacing={4}
+        bg={"dark.900"}
+        color="white"
+        w="100%"
+        py={4}
+        px={16}
+      >
+        <Flex gap={8} alignItems="center">
+          <Flex pr={4} gap={2} alignItems="center">
+            <Text>pt</Text>
+            <Switch
+              colorScheme="secondary"
+              defaultChecked={language === "en"}
+              onChange={(e) => setLanguage(e.target.checked ? "en" : "pt")}
+            />
+            <Text>en</Text>
+          </Flex>
+          {NAV_ITEMS.map((navItem) => (
+            <Box
+              key={navItem.label}
+              className={styles.navbarComponent}
+              display={{ base: "none", md: "flex" }}
+            >
+              <Link
+                as={NextLink}
+                href={navItem.href ?? "#"}
+                fontWeight={500}
+                _hover={{
+                  textDecoration: "none",
+                  color: "secondary.500",
+                }}
+              >
+                {formatToTitleCase(navItem.label)}
+              </Link>
+            </Box>
+          ))}
         </Flex>
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label} className={styles.navbarComponent}>
-            <Link
-              as={NextLink}
-              href={navItem.href ?? "#"}
-              fontWeight={500}
-              _hover={{
-                textDecoration: "none",
-                color: "secondary.500",
-              }}
-            >
-              {formatToTitleCase(navItem.label)}
-            </Link>
-          </Box>
-        ))}
-      </Flex>
-      <Flex gap={8} alignItems="center">
-        {ICON_ITEMS.map((navItem, index) => (
-          <Box key={index}>
-            <Link
-            as={NextLink}
-              target="_blank"
-              rel="noreferrer noopener"
-              href={navItem.href}
-              _hover={{
-                textDecoration: "none",
-                color: "secondary.500",
-              }}
-            >
-              {navItem.icon}
-            </Link>
-          </Box>
-        ))}
-      </Flex>
-    </Stack>
+        <Flex
+          gap={8}
+          alignItems="center"
+          display={{ base: "none", md: "flex" }}
+        >
+          {ICON_ITEMS.map((navItem, index) => (
+            <Box key={index}>
+              <Link
+                as={NextLink}
+                target="_blank"
+                rel="noreferrer noopener"
+                href={navItem.href}
+                _hover={{
+                  textDecoration: "none",
+                  color: "secondary.500",
+                }}
+              >
+                {navItem.icon}
+              </Link>
+            </Box>
+          ))}
+        </Flex>
+        <IconButton
+          display={{ base: "flex", md: "none" }}
+          onClick={onToggle}
+          icon={isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+          color="white"
+          variant={"ghost"}
+          aria-label={"Toggle Navigation"}
+        />
+      </Stack>
+      <Collapse in={isOpen} animateOpacity>
+        <Divider />
+        <Stack bg="dark.900" w="100vw" color="white" align="center" py={2}>
+          {NAV_ITEMS.map((navItem) => (
+            <Box key={navItem.label} className={styles.navbarComponent}>
+              <Link
+                as={NextLink}
+                href={navItem.href ?? "#"}
+                fontWeight={500}
+                _hover={{
+                  textDecoration: "none",
+                  color: "secondary.500",
+                }}
+              >
+                {formatToTitleCase(navItem.label)}
+              </Link>
+            </Box>
+          ))}
+        </Stack>
+          <Divider />
+      </Collapse>
+    </>
   );
 }
